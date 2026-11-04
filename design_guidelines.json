@@ -1,0 +1,143 @@
+{
+  "project_title": "REFRAM™ - Technical Foundry Ramming Systems Landing Page for OVERKKAST",
+  "archetype": "ARCHETYPE 2: THE PERFORMANCE PRO (Industrial Heavy Machinery & Precision Foundry Engineering)",
+  "theme": "Dark Industrial Foundry Editorial",
+  "language_support": {
+    "default": "FR",
+    "supported": ["FR", "EN"],
+    "switcher_location": "Floating Glass Header & Footer"
+  },
+  "colors": {
+    "background_dark": "#0A0D12",
+    "background_card": "#121721",
+    "background_card_hover": "#1A2232",
+    "border_subtle": "rgba(255, 255, 255, 0.08)",
+    "border_active": "rgba(255, 85, 0, 0.4)",
+    "accent_safety_orange": "#FF5500",
+    "accent_safety_orange_hover": "#FF6B1A",
+    "accent_cobalt_blue": "#2563EB",
+    "accent_cobalt_dark": "#1E40AF",
+    "text_primary": "#F8FAFC",
+    "text_secondary": "#94A3B8",
+    "text_muted": "#64748B",
+    "text_accent": "#FF5500",
+    "status_green": "#10B981"
+  },
+  "typography": {
+    "heading_font": "Barlow, Outfit, sans-serif",
+    "technical_mono_font": "JetBrains Mono, monospace",
+    "body_font": "Plus Jakarta Sans, DM Sans, sans-serif",
+    "scale": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight uppercase leading-[1.05]",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight uppercase leading-tight",
+      "card_h3": "text-xl sm:text-2xl font-bold tracking-tight text-white",
+      "mono_label": "text-xs font-mono uppercase tracking-[0.2em] text-[#FF5500]",
+      "body_text": "text-base text-slate-300 leading-relaxed",
+      "caption": "text-xs font-mono text-slate-400"
+    }
+  },
+  "layout_and_grids": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "hero_grid": "grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center",
+    "features_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+    "products_grid": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
+    "table_container": "overflow-x-auto rounded-xl border border-white/10 bg-[#121721]"
+  },
+  "motion_and_effects": {
+    "smooth_scroll": "Lenis smooth scroll integration",
+    "hero_text_reveal": "Staggered line reveal with Framer Motion opacity and y-offset",
+    "marquee": "Slow editorial text ticker using react-fast-marquee or CSS animation",
+    "glassmorphism": "backdrop-blur-xl bg-[#0A0D12]/80 border border-white/10",
+    "hover_glow": "hover:shadow-[0_0_25px_rgba(255,85,0,0.25)] hover:border-[#FF5500]/50 transition-all duration-300"
+  },
+  "image_urls": {
+    "hero_background": "https://images.unsplash.com/photo-1557592494-37448a3f4b11?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "molten_pouring": "https://images.unsplash.com/photo-1697281679321-a9ce55ce0a8f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "foundry_ladle": "https://images.unsplash.com/photo-1791356099225-82e4901ea804?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "foundry_sparks": "https://images.unsplash.com/photo-1759411364558-38a9e2b04f76?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "furnace_fire": "https://images.unsplash.com/photo-1572019637935-a6bc9723b3b6?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "key_sections": [
+    {
+      "id": "header",
+      "name": "Header & Navigation",
+      "features": ["OVERKKAST logo", "REFRAM™ badge", "Bilingual FR/EN toggle", "Phone link + Quick quote button", "Sticky glass effect"],
+      "test_ids": ["main-header", "language-switcher-btn", "header-phone-cta", "header-quote-btn"]
+    },
+    {
+      "id": "hero",
+      "name": "Kinetic Editorial Hero",
+      "features": ["Line reveal title", "Tagline: Distribué en France par OVERKKAST", "Key metrics badges (45+ ans, 60+ pays)", "Primary CTA: Demander une étude / Quote Request", "Secondary CTA: Spécifications techniques"],
+      "test_ids": ["hero-section", "hero-title", "hero-quote-cta", "hero-specs-cta"]
+    },
+    {
+      "id": "marquee",
+      "name": "Editorial Marquee Ribbon",
+      "features": ["Slow drift marquee", "Bilingual technical keywords: SYSTÈMES DE PISSETAGE PNEUMATIQUE • COMPACTION DE SÉCURITÉ • FOURS À INDUCTION • LINING LIFETIME +40%"]
+    },
+    {
+      "id": "section_01",
+      "name": "01 — Pourquoi la compaction est critique",
+      "features": ["Problem/Solution editorial cards", "6 Key benefits icon row (Densité Égale, Gain de Temps, Durée de Vie Prolongée, Charge Utile Accrue, Main d'Œuvre Optimisée, Processus Répétable)", "Interactive refractory lining density comparison visual"],
+      "test_ids": ["section-critical", "benefit-card-density", "benefit-card-lifetime"]
+    },
+    {
+      "id": "section_02",
+      "name": "02 — Gamme d'Équipements REFRAM™",
+      "features": ["Category tabs (Wall Rammers, Bottom Rammers, Flange Rammers, Cranes & Suspension, Hand Rammers)", "Product cards (2WR Double Piston, 3WR Triple Piston, 5WR Quintuple Piston, 1BR Bottom Rammer, OAF Flange Rammer, LIF.A01 Auto Crane, LIF.M01 Manual Crane)", "Spec modal popup with full technical drawings"],
+      "test_ids": ["section-products", "product-tab-wall", "product-card-2wr", "product-card-3wr", "product-card-5wr"]
+    },
+    {
+      "id": "section_03",
+      "name": "03 — Spécifications & Performance Technique",
+      "features": ["Filterable technical table (Mini, Standard, Long, Large pistons)", "Pressure unit toggle (Bar / PSI)", "Air flow toggle (L/min / CFM)", "Metrics: Stroke length, VPM frequency, impact force"],
+      "test_ids": ["section-specs-table", "unit-toggle-bar", "unit-toggle-psi", "specs-table-body"]
+    },
+    {
+      "id": "section_04",
+      "name": "04 — Automation PLC & Cycle Automatique",
+      "features": ["Step-by-step automatic compaction lifecycle (Programmation, Rotation 360°, Tassage homogène, Arrêt auto)", "Interactive PLC control panel preview widget"],
+      "test_ids": ["section-plc-automation", "plc-step-1", "plc-step-2", "plc-step-3"]
+    },
+    {
+      "id": "section_05",
+      "name": "05 — Pièces Détachées & Accessoires",
+      "features": ["Visual spare parts grid (Pistons, Joins haute température, Soupapes pneumatiques, Flexible blindé, Plaques de tassage)", "Quick spare part request drawer/modal"],
+      "test_ids": ["section-spare-parts", "spare-part-piston", "spare-part-inquiry-btn"]
+    },
+    {
+      "id": "section_06",
+      "name": "06 — Contact & Demande de Devis",
+      "features": ["Bilingual quote request form (Nom, Société, Email, Téléphone, Capacité du Four en Tonnes, Message)", "Contact details (OVERKKAST, 01 84 80 86 99, contact@overkkast.com)", "Interactive ROI / Time saving calculator widget"],
+      "test_ids": ["section-contact", "quote-form-name", "quote-form-email", "quote-form-submit-btn"]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "features": ["OVERKKAST branding", "ISO 9001 / ISO 14001 / CE badges", "Legal links", "Language switcher"],
+      "test_ids": ["main-footer", "footer-iso-badge"]
+    }
+  ],
+  "instructions_to_main_agent": [
+    "Ensure the entire app supports instant live bilingual switching (FR / EN) using state or i18n context without reloading.",
+    "Use dark industrial styling with stark typography: high contrast white text on dark navy/charcoal `#0A0D12` background, accented with safety orange `#FF5500` and cobalt blue machine highlights.",
+    "All interactive elements (buttons, inputs, tabs, modal triggers, language toggles, table unit switches) MUST have strict kebab-case `data-testid` attributes as listed.",
+    "Implement Sonner toast notifications when submitting the quote form or clicking spare part inquiry buttons.",
+    "Do not use transparent dropdown backgrounds; ensure all floating overlays have dark blurred backgrounds for legibility.",
+    "Make sure product cards allow clicking to open a detailed technical specification modal/sheet for the selected REFRAM™ machine."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons. Use lucide-react or phosphor icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom selection states, and loading animations.",
+    "All interactive and key informational elements MUST include data-testid attribute."
+  ]
+}
