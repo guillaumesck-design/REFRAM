@@ -49,6 +49,8 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 
 - 05/11/2026 : section « Film » ajoutée au milieu de la page (entre Performance et Automatisme) — vidéo de présentation IDEALMODEL 2025 (6 min, hébergée en local /video/presentation-2025.mp4), lecteur élégant avec affiche extraite de la vidéo, bouton lecture doré pulsant, contrôles natifs après le premier clic. Lecture vérifiée (currentTime > 0).
 
+- 05/11/2026 : bouton « Être rappelé » dans la section contact — fenêtre avec le seul numéro de téléphone (+ consentement), endpoint POST /api/callback avec validation du numéro, e-mail envoyé à contact@overkkast.com avec lien tel:, archivage MongoDB (callback_requests). Testé : envoi réel réussi + numéro invalide rejeté.
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

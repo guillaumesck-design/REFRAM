@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'sonner';
-import { Phone, Mail, MapPin, Loader2, ArrowDownRight } from 'lucide-react';
+import { Phone, PhoneIncoming, Mail, MapPin, Loader2, ArrowDownRight } from 'lucide-react';
 import { Reveal, SectionHead } from './Reveal';
+import CallbackModal from './CallbackModal';
 import { PHONE, PHONE_TEL, EMAIL, ADDRESS } from '../i18n';
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
@@ -14,6 +15,7 @@ export default function ContactSection({ t }) {
   const f = t.s6.form;
   const [form, setForm] = useState({ name: '', company: '', phone: '', email: '', furnace_capacity: f.capacityOpts[0], equipment: f.equipmentOpts[0], message: '', consent: false });
   const [sending, setSending] = useState(false);
+  const [cbOpen, setCbOpen] = useState(false);
 
   useEffect(() => {
     setForm((prev) => ({ ...prev, furnace_capacity: f.capacityOpts[0], equipment: f.equipmentOpts[0] }));
@@ -70,6 +72,12 @@ export default function ContactSection({ t }) {
                   </span>
                   <span className="pt-2 text-base text-[#3A4350] leading-relaxed">{ADDRESS}</span>
                 </div>
+                <div className="pt-4">
+                  <button data-testid="callback-cta-btn" onClick={() => setCbOpen(true)}
+                    className="btn-gold-outline inline-flex items-center gap-2 rounded-full border px-8 py-4 text-base font-semibold">
+                    <PhoneIncoming size={18} /> {t.cb.cta}
+                  </button>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -107,6 +115,7 @@ export default function ContactSection({ t }) {
           </div>
         </div>
       </div>
+      <CallbackModal open={cbOpen} t={t.cb} onClose={() => setCbOpen(false)} />
     </section>
   );
 }
