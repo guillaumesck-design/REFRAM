@@ -33,10 +33,10 @@ export default function SpecsSection({ t }) {
           <div className="mt-12 overflow-x-auto rounded-sm border border-black/10 bg-white shadow-[0_20px_60px_rgba(16,21,29,0.06)]" data-testid="specs-table-wrap">
             <table className="w-full min-w-[760px] text-left border-collapse" data-testid="specs-table">
               <thead>
-                <tr className="bg-[#FF5500]">
-                  <th className="px-5 py-4 font-mono-tech text-[11px] uppercase tracking-[0.15em] text-white">REFRAM™</th>
+                <tr className="bg-[#C5B358]">
+                  <th className="px-5 py-4 font-mono-tech text-[13px] uppercase tracking-[0.15em] text-[#1C1706]">REFRAM™</th>
                   {t.s3.cols.map((c) => (
-                    <th key={c} className="px-5 py-4 font-mono-tech text-[11px] uppercase tracking-[0.15em] text-white whitespace-nowrap">{c}</th>
+                    <th key={c} className="px-5 py-4 font-mono-tech text-[13px] uppercase tracking-[0.15em] text-[#1C1706] whitespace-nowrap">{c}</th>
                   ))}
                 </tr>
               </thead>
@@ -50,7 +50,7 @@ export default function SpecsSection({ t }) {
                         </th>
                       )}
                       {r.map((cell, j) => (
-                        <td key={j} className={`px-5 py-3.5 text-sm whitespace-nowrap ${j === 0 ? 'font-mono-tech text-[#FF5500]' : 'text-[#3A4350]'}`}>{cell}</td>
+                        <td key={j} className={`px-5 py-3.5 text-base whitespace-nowrap ${j === 0 ? 'font-mono-tech text-[#8C7A28]' : 'text-[#3A4350]'}`}>{cell}</td>
                       ))}
                     </tr>
                   ))
@@ -60,7 +60,7 @@ export default function SpecsSection({ t }) {
           </div>
         </Reveal>
         <Reveal delay={0.3}>
-          <p className="mt-5 font-mono-tech text-xs text-[#8B929C]" data-testid="specs-note">{t.s3.note}</p>
+          <p className="mt-5 font-mono-tech text-sm text-[#8B929C]" data-testid="specs-note">{t.s3.note}</p>
         </Reveal>
       </div>
     </section>

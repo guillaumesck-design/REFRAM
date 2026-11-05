@@ -41,6 +41,10 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 - 05/11/2026 : téléphone remplacé par +33 (0)7 49 70 73 89 partout (header, section contact, footer, lien tel:).
 - 05/11/2026 : vrai logo OVERKKAST intégré (version sombre dans le header sur fond clair, version blanche dans le footer sombre) — l'étoile SVG supprimée ; favicon = rond doré du logo.
 
+- 05/11/2026 : boutons passés en or Overkkast #C5B358 avec balayage lumineux au survol (classes .btn-gold / .btn-gold-outline) — CTA header, hero, fiches machines, onglets gamme, envoi formulaire, sélecteur de langue, en-tête du tableau.
+- 05/11/2026 : typographie plus classique/professionnelle — titres Libre Franklin, texte Source Sans 3, labels IBM Plex Mono ; petites tailles de police augmentées partout (10-12px → 13-14px, 14px → 16px).
+- 05/11/2026 : header agrandi (logo h-12, menu en text-sm, hauteur 96px) ; sous-titre « Distributeur France » retiré du header (conservé au footer) pour éviter le chevauchement du menu.
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

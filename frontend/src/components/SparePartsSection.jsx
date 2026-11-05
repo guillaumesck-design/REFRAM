@@ -5,7 +5,7 @@ import { IMG } from '../i18n';
 const scrollTo = (id) => {
   const el = document.getElementById(id);
   if (!el) return;
-  if (window.__lenis) window.__lenis.scrollTo(el, { offset: -70 });
+  if (window.__lenis) window.__lenis.scrollTo(el, { offset: -96 });
   else el.scrollIntoView({ behavior: 'smooth' });
 };
 
@@ -20,7 +20,7 @@ export default function SparePartsSection({ t }) {
               <ul className="mt-10 flex flex-wrap gap-2" data-testid="spare-parts-list">
                 {t.s5.items.map((it, i) => (
                   <li key={it} data-testid={`spare-part-${i}`}
-                    className="rounded-full border border-black/15 px-4 py-2 font-mono-tech text-xs uppercase tracking-[0.12em] text-[#5C6470] hover:border-[#FF5500]/70 hover:text-[#10151D] transition-[border-color,color] duration-300">
+                    className="rounded-full border border-black/15 px-4 py-2 font-mono-tech text-sm uppercase tracking-[0.12em] text-[#5C6470] hover:border-[#C5B358] hover:text-[#10151D] transition-[border-color,color] duration-300">
                     {it}
                   </li>
                 ))}
@@ -28,8 +28,8 @@ export default function SparePartsSection({ t }) {
             </Reveal>
             <Reveal delay={0.3}>
               <button data-testid="spare-part-inquiry-btn" onClick={() => scrollTo('s6')}
-                className="mt-9 inline-flex items-center gap-2 rounded-full border border-[#FF5500]/70 px-7 py-3.5 text-sm font-semibold text-[#FF5500] hover:bg-[#FF5500] hover:text-white transition-[background-color,color] duration-300">
-                {t.s5.cta} <ArrowUpRight size={16} />
+                className="btn-gold-outline mt-9 inline-flex items-center gap-2 rounded-full border px-8 py-4 text-base font-semibold">
+                {t.s5.cta} <ArrowUpRight size={17} />
               </button>
             </Reveal>
           </div>
@@ -39,7 +39,7 @@ export default function SparePartsSection({ t }) {
                 <div className="overflow-hidden rounded-sm border border-black/10 spotlight">
                   <img src={IMG.spare} alt={t.s5.fig} className="w-full h-[280px] sm:h-[360px] object-cover object-center" data-testid="spare-parts-image" />
                 </div>
-                <figcaption className="mt-4 font-mono-tech text-xs text-[#8B929C]" data-testid="spare-fig-caption">{t.s5.fig}</figcaption>
+                <figcaption className="mt-4 font-mono-tech text-sm text-[#8B929C]" data-testid="spare-fig-caption">{t.s5.fig}</figcaption>
               </figure>
             </Reveal>
           </div>

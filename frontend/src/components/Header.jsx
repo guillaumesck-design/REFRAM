@@ -3,14 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Menu, X } from 'lucide-react';
 import { PHONE, PHONE_TEL } from '../i18n';
 
-export const LogoMark = ({ size = 34 }) => (
-  <img src="/favicon-mark.png" width={size} height={size} alt="Overkkast" style={{ objectFit: 'contain' }} />
-);
-
 const scrollTo = (id) => {
   const el = document.getElementById(id);
   if (!el) return;
-  if (window.__lenis) window.__lenis.scrollTo(el, { offset: -70 });
+  if (window.__lenis) window.__lenis.scrollTo(el, { offset: -96 });
   else el.scrollIntoView({ behavior: 'smooth' });
 };
 
@@ -37,19 +33,15 @@ export default function Header({ t, lang, setLang }) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-[72px]">
-          <button data-testid="header-logo" onClick={() => window.__lenis ? window.__lenis.scrollTo(0) : window.scrollTo(0, 0)} className="flex items-center gap-3 text-left">
-            <img src="/img/logo-dark.png" alt="Overkkast" className="h-7 sm:h-8 w-auto" />
-            <span className="hidden sm:block w-px h-6 bg-black/15" aria-hidden="true" />
-            <span className="hidden sm:block leading-tight">
-              <span className="block font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#2563EB]">{t.headerSub}</span>
-            </span>
+        <div className="flex items-center justify-between h-20 sm:h-24">
+          <button data-testid="header-logo" onClick={() => window.__lenis ? window.__lenis.scrollTo(0) : window.scrollTo(0, 0)} className="flex items-center gap-4 text-left">
+            <img src="/img/logo-dark.png" alt="Overkkast" className="h-10 sm:h-12 w-auto" />
           </button>
 
-          <nav className="hidden lg:flex items-center gap-7" data-testid="header-nav">
+          <nav className="hidden lg:flex items-center gap-8" data-testid="header-nav">
             {links.map(([id, label]) => (
               <button key={id} data-testid={`nav-${id}`} onClick={() => scrollTo(id)}
-                className="font-mono-tech text-[11px] uppercase tracking-[0.18em] text-[#5C6470] hover:text-[#10151D] transition-colors duration-300">
+                className="font-mono-tech text-sm uppercase tracking-[0.15em] text-[#3A4350] hover:text-[#10151D] transition-colors duration-300">
                 {label}
               </button>
             ))}
@@ -59,23 +51,23 @@ export default function Header({ t, lang, setLang }) {
             <div className="flex items-center rounded-full border border-black/15 p-0.5" data-testid="language-switcher">
               {['fr', 'en'].map((l) => (
                 <button key={l} data-testid={`lang-${l}`} onClick={() => setLang(l)}
-                  className={`px-2.5 py-1 rounded-full font-mono-tech text-[11px] uppercase tracking-widest transition-colors duration-300 ${
-                    lang === l ? 'bg-[#FF5500] text-white' : 'text-[#5C6470] hover:text-[#10151D]'
+                  className={`px-3 py-1.5 rounded-full font-mono-tech text-[13px] uppercase tracking-widest transition-colors duration-300 ${
+                    lang === l ? 'bg-[#C5B358] text-[#1C1706]' : 'text-[#5C6470] hover:text-[#10151D]'
                   }`}>
                   {l}
                 </button>
               ))}
             </div>
             <a data-testid="header-phone-cta" href={PHONE_TEL}
-              className="hidden xl:flex items-center gap-2 font-mono-tech text-xs whitespace-nowrap text-[#5C6470] hover:text-[#10151D] transition-colors duration-300">
-              <Phone size={14} className="text-[#FF5500]" /> {PHONE}
+              className="hidden xl:flex items-center gap-2 font-mono-tech text-sm whitespace-nowrap text-[#3A4350] hover:text-[#10151D] transition-colors duration-300">
+              <Phone size={16} className="text-[#C5B358]" /> {PHONE}
             </a>
             <button data-testid="header-quote-btn" onClick={() => scrollTo('s6')}
-              className="hidden sm:inline-flex items-center rounded-full bg-[#FF5500] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#FF6B1A] hover:shadow-[0_0_25px_rgba(255,85,0,0.35)] transition-[background-color,box-shadow] duration-300">
+              className="btn-gold hidden sm:inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold whitespace-nowrap">
               {t.quoteCta}
             </button>
             <button data-testid="mobile-menu-btn" onClick={() => setOpen(!open)} className="lg:hidden p-2 text-[#10151D]" aria-label="Menu">
-              {open ? <X size={22} /> : <Menu size={22} />}
+              {open ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>
@@ -96,7 +88,7 @@ export default function Header({ t, lang, setLang }) {
                 </button>
               ))}
               <button data-testid="mobile-quote-btn" onClick={() => { setOpen(false); scrollTo('s6'); }}
-                className="mt-2 rounded-full bg-[#FF5500] px-6 py-3 text-sm font-semibold text-white w-fit">
+                className="btn-gold mt-2 rounded-full px-7 py-3.5 text-sm font-semibold w-fit">
                 {t.quoteCta}
               </button>
             </div>

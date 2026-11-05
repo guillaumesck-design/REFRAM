@@ -13,7 +13,7 @@ export default function WhySection({ t }) {
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7 space-y-6">
             <Reveal>
-              <p className="text-base sm:text-lg text-[#5C6470] leading-relaxed border-l-2 border-[#FF5500] pl-6" data-testid="s1-p1">{t.s1.p1}</p>
+              <p className="text-base sm:text-lg text-[#3A4350] leading-relaxed border-l-2 border-[#C5B358] pl-6" data-testid="s1-p1">{t.s1.p1}</p>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="text-base sm:text-lg text-[#10151D] leading-relaxed border-l-2 border-[#2563EB] pl-6" data-testid="s1-p2">{t.s1.p2}</p>
@@ -26,11 +26,11 @@ export default function WhySection({ t }) {
                   <Reveal key={b.t} delay={0.06 * i}>
                     <div
                       data-testid={`benefit-card-${i}`}
-                      className="group h-full rounded-sm border border-black/10 bg-white p-6 hover:border-[#FF5500]/60 hover:shadow-[0_16px_40px_rgba(255,85,0,0.10)] transition-[border-color,box-shadow] duration-300"
+                      className="group h-full rounded-sm border border-black/10 bg-white p-6 hover:border-[#C5B358] hover:shadow-[0_16px_40px_rgba(197,179,88,0.18)] transition-[border-color,box-shadow] duration-300"
                     >
-                      <Icon size={22} className="text-[#FF5500]" strokeWidth={1.8} />
+                      <Icon size={24} className="text-[#C5B358]" strokeWidth={1.8} />
                       <h3 className="mt-4 font-display text-xl font-semibold uppercase text-[#10151D]">{b.t}</h3>
-                      <p className="mt-2 text-sm text-[#5C6470] leading-relaxed">{b.d}</p>
+                      <p className="mt-2 text-base text-[#3A4350] leading-relaxed">{b.d}</p>
                     </div>
                   </Reveal>
                 );
@@ -41,12 +41,12 @@ export default function WhySection({ t }) {
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <Reveal delay={0.15}>
               <figure className="relative">
-                <div className="absolute -inset-3 border border-[#FF5500]/30 rounded-sm" aria-hidden="true" />
+                <div className="absolute -inset-3 border border-[#C5B358]/40 rounded-sm" aria-hidden="true" />
                 <div className="relative overflow-hidden rounded-sm border border-black/10 spotlight">
                   <img src={IMG.lining} alt={t.s1.fig} className="w-full h-[480px] sm:h-[560px] object-cover object-center" data-testid="s1-lining-image" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/40 via-transparent to-transparent" aria-hidden="true" />
                 </div>
-                <figcaption className="mt-4 font-mono-tech text-xs text-[#8B929C]" data-testid="s1-fig-caption">{t.s1.fig}</figcaption>
+                <figcaption className="mt-4 font-mono-tech text-sm text-[#8B929C]" data-testid="s1-fig-caption">{t.s1.fig}</figcaption>
               </figure>
             </Reveal>
           </div>

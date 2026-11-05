@@ -8,7 +8,7 @@ import { PHONE, PHONE_TEL, EMAIL, ADDRESS } from '../i18n';
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 const inputCls =
-  'w-full rounded-sm border border-black/15 bg-[#FBFAF7] px-4 py-3 text-sm text-[#10151D] placeholder:text-[#8B929C] focus:outline-none focus:border-[#FF5500]/70 focus:ring-1 focus:ring-[#FF5500]/40 transition-[border-color,box-shadow] duration-300';
+  'w-full rounded-sm border border-black/15 bg-[#FBFAF7] px-4 py-3 text-base text-[#10151D] placeholder:text-[#8B929C] focus:outline-none focus:border-[#C5B358] focus:ring-1 focus:ring-[#C5B358]/50 transition-[border-color,box-shadow] duration-300';
 
 export default function ContactSection({ t }) {
   const f = t.s6.form;
@@ -51,24 +51,24 @@ export default function ContactSection({ t }) {
             <SectionHead num={t.s6.num} title={t.s6.title} sub={t.s6.sub} />
             <Reveal delay={0.2}>
               <div className="mt-12 space-y-6" data-testid="contact-direct">
-                <p className="font-mono-tech text-xs uppercase tracking-[0.2em] text-[#8B929C]">{t.s6.direct}</p>
+                <p className="font-mono-tech text-[13px] uppercase tracking-[0.2em] text-[#8B929C]">{t.s6.direct}</p>
                 <a data-testid="contact-phone-link" href={PHONE_TEL} className="group flex items-center gap-4">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#FF5500]/60 text-[#FF5500] group-hover:bg-[#FF5500] group-hover:text-white transition-[background-color,color] duration-300">
-                    <Phone size={17} />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#C5B358] text-[#8C7A28] group-hover:bg-[#C5B358] group-hover:text-[#1C1706] transition-[background-color,color] duration-300">
+                    <Phone size={18} />
                   </span>
                   <span className="font-display text-2xl font-semibold tracking-wide text-[#10151D]">{PHONE}</span>
                 </a>
                 <a data-testid="contact-email-link" href={`mailto:${EMAIL}`} className="group flex items-center gap-4">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full border border-black/20 text-[#5C6470] group-hover:border-[#2563EB] group-hover:text-[#2563EB] transition-[border-color,color] duration-300">
-                    <Mail size={17} />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/20 text-[#5C6470] group-hover:border-[#2563EB] group-hover:text-[#2563EB] transition-[border-color,color] duration-300">
+                    <Mail size={18} />
                   </span>
-                  <span className="text-base text-[#3A4350] group-hover:text-[#10151D] transition-colors duration-300">{EMAIL}</span>
+                  <span className="text-lg text-[#3A4350] group-hover:text-[#10151D] transition-colors duration-300">{EMAIL}</span>
                 </a>
                 <div className="flex items-start gap-4" data-testid="contact-address">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full border border-black/20 text-[#5C6470]">
-                    <MapPin size={17} />
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-black/20 text-[#5C6470]">
+                    <MapPin size={18} />
                   </span>
-                  <span className="pt-2 text-sm text-[#5C6470] leading-relaxed">{ADDRESS}</span>
+                  <span className="pt-2 text-base text-[#3A4350] leading-relaxed">{ADDRESS}</span>
                 </div>
               </div>
             </Reveal>
@@ -92,15 +92,15 @@ export default function ContactSection({ t }) {
                 <textarea data-testid="quote-form-message" rows={4} value={form.message} onChange={set('message')} placeholder={f.message} className={`${inputCls} mt-5 resize-none`} />
                 <label className="mt-5 flex items-start gap-3 cursor-pointer" data-testid="quote-form-consent-label">
                   <input data-testid="quote-form-consent" required type="checkbox" checked={form.consent} onChange={set('consent')}
-                    className="mt-0.5 h-4 w-4 rounded-sm border-black/20 accent-[#FF5500]" />
-                  <span className="text-xs text-[#5C6470] leading-relaxed">{f.consent}</span>
+                    className="mt-1 h-4 w-4 rounded-sm border-black/20 accent-[#C5B358]" />
+                  <span className="text-sm text-[#3A4350] leading-relaxed">{f.consent}</span>
                 </label>
                 <div className="mt-8 flex flex-wrap items-center gap-5">
                   <button data-testid="quote-form-submit-btn" type="submit" disabled={sending}
-                    className="group inline-flex items-center gap-2 rounded-full bg-[#FF5500] px-8 py-3.5 text-sm font-semibold text-white hover:bg-[#FF6B1A] hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] disabled:opacity-60 transition-[background-color,box-shadow,opacity] duration-300">
-                    {sending ? (<><Loader2 size={16} className="animate-spin" /> {f.sending}</>) : (<>{f.submit} <ArrowDownRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" /></>)}
+                    className="btn-gold group inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold disabled:opacity-60">
+                    {sending ? (<><Loader2 size={18} className="animate-spin" /> {f.sending}</>) : (<>{f.submit} <ArrowDownRight size={17} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" /></>)}
                   </button>
-                  <p className="text-xs text-[#8B929C]" data-testid="quote-form-secure-note">{f.secure}</p>
+                  <p className="text-sm text-[#8B929C]" data-testid="quote-form-secure-note">{f.secure}</p>
                 </div>
               </form>
             </Reveal>

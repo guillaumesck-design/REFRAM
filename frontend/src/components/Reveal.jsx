@@ -15,10 +15,10 @@ export const Reveal = ({ children, delay = 0, className = '', y = 32 }) => (
 export const SectionHead = ({ num, title, sub }) => (
   <div className="max-w-3xl">
     <Reveal>
-      <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-[#2563EB]">{num}</p>
+      <p className="font-mono-tech text-sm uppercase tracking-[0.25em] text-[#2563EB]">{num}</p>
     </Reveal>
     <Reveal delay={0.08}>
-      <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold uppercase leading-[1.02] tracking-tight text-[#10151D]">
+      <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold uppercase leading-[1.04] tracking-tight text-[#10151D]">
         {title.map((l, i) => (
           <span key={i} className="block">{l}</span>
         ))}
@@ -26,7 +26,7 @@ export const SectionHead = ({ num, title, sub }) => (
     </Reveal>
     {sub && (
       <Reveal delay={0.16}>
-        <p className="mt-6 text-base sm:text-lg text-[#5C6470] leading-relaxed">{sub}</p>
+        <p className="mt-6 text-base sm:text-lg text-[#3A4350] leading-relaxed">{sub}</p>
       </Reveal>
     )}
   </div>
