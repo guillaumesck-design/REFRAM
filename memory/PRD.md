@@ -33,6 +33,10 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 - Responsive 375 / 768 / 1366 px vérifié par captures
 - Une erreur transitoire 500 du proxy e-mail a été observée une fois, non reproduite ensuite
 
+## Itérations
+- 05/11/2026 : thème blanc (fond #F7F5F1, sections alternées #EFEDE6, texte #10151D) — les visuels produits et le footer restent sur fond sombre volontairement pour le contraste.
+- 05/11/2026 : fiches détaillées par machine — modal au clic sur chaque carte produit (description, caractéristiques, options & accessoires, FR/EN) ; le bouton « Demander cette configuration » pré-remplit le champ « Équipement d'intérêt » du formulaire et y fait défiler.
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

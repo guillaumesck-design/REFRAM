@@ -6,24 +6,24 @@
 
 @layer base {
   :root {
-    --background: 220 28% 5%;
-    --foreground: 210 40% 98%;
-    --card: 219 30% 10%;
-    --card-foreground: 210 40% 98%;
-    --popover: 219 30% 10%;
-    --popover-foreground: 210 40% 98%;
+    --background: 40 20% 96%;
+    --foreground: 222 32% 9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 32% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 32% 9%;
     --primary: 19 100% 50%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 219 25% 14%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 219 25% 14%;
-    --muted-foreground: 215 20% 65%;
+    --secondary: 40 14% 92%;
+    --secondary-foreground: 222 32% 9%;
+    --muted: 40 14% 92%;
+    --muted-foreground: 220 9% 46%;
     --accent: 221 83% 53%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 20% 16%;
-    --input: 220 20% 20%;
+    --border: 30 10% 86%;
+    --input: 30 10% 80%;
     --ring: 19 100% 50%;
     --radius: 0.5rem;
   }
@@ -37,7 +37,7 @@
     scroll-behavior: auto;
   }
   body {
-    @apply bg-[#0A0D12] text-[#F8FAFC] antialiased;
+    @apply bg-[#F7F5F1] text-[#10151D] antialiased;
     font-family: 'Barlow', sans-serif;
     overflow-x: hidden;
   }
@@ -61,7 +61,7 @@
   inset: 0;
   z-index: 60;
   pointer-events: none;
-  opacity: 0.05;
+  opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -82,7 +82,7 @@
   display: block;
 }
 
-/* Spotlight frame for product photography */
+/* Spotlight plate for product photography (kept dark on purpose) */
 .spotlight {
   background: radial-gradient(ellipse 70% 60% at 50% 42%, #1A2232 0%, #0A0D12 75%);
 }

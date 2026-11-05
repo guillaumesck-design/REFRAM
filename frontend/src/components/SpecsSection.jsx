@@ -30,7 +30,7 @@ export default function SpecsSection({ t }) {
         <SectionHead num={t.s3.num} title={t.s3.title} sub={t.s3.sub} />
 
         <Reveal delay={0.2}>
-          <div className="mt-12 overflow-x-auto rounded-sm border border-white/10 bg-[#121721]" data-testid="specs-table-wrap">
+          <div className="mt-12 overflow-x-auto rounded-sm border border-black/10 bg-white shadow-[0_20px_60px_rgba(16,21,29,0.06)]" data-testid="specs-table-wrap">
             <table className="w-full min-w-[760px] text-left border-collapse" data-testid="specs-table">
               <thead>
                 <tr className="bg-[#FF5500]">
@@ -43,14 +43,14 @@ export default function SpecsSection({ t }) {
               <tbody data-testid="specs-table-body">
                 {DATA.map((g) =>
                   g.rows.map((r, i) => (
-                    <tr key={`${g.type}-${i}`} className="border-t border-white/10 hover:bg-[#1A2232] transition-colors duration-200">
+                    <tr key={`${g.type}-${i}`} className="border-t border-black/10 hover:bg-[#F6F4EF] transition-colors duration-200">
                       {i === 0 && (
-                        <th rowSpan={g.rows.length} className="px-5 py-4 align-top font-display text-lg font-semibold uppercase text-white border-r border-white/10 whitespace-nowrap" data-testid={`spec-type-${g.type}`}>
+                        <th rowSpan={g.rows.length} className="px-5 py-4 align-top font-display text-lg font-semibold uppercase text-[#10151D] border-r border-black/10 whitespace-nowrap" data-testid={`spec-type-${g.type}`}>
                           {t.s3.types[g.type]}
                         </th>
                       )}
                       {r.map((cell, j) => (
-                        <td key={j} className={`px-5 py-3.5 text-sm whitespace-nowrap ${j === 0 ? 'font-mono-tech text-[#FF5500]' : 'text-[#CBD5E1]'}`}>{cell}</td>
+                        <td key={j} className={`px-5 py-3.5 text-sm whitespace-nowrap ${j === 0 ? 'font-mono-tech text-[#FF5500]' : 'text-[#3A4350]'}`}>{cell}</td>
                       ))}
                     </tr>
                   ))
@@ -60,7 +60,7 @@ export default function SpecsSection({ t }) {
           </div>
         </Reveal>
         <Reveal delay={0.3}>
-          <p className="mt-5 font-mono-tech text-xs text-[#64748B]" data-testid="specs-note">{t.s3.note}</p>
+          <p className="mt-5 font-mono-tech text-xs text-[#8B929C]" data-testid="specs-note">{t.s3.note}</p>
         </Reveal>
       </div>
     </section>

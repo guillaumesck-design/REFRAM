@@ -18,7 +18,7 @@ export const SectionHead = ({ num, title, sub }) => (
       <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-[#FF5500]">{num}</p>
     </Reveal>
     <Reveal delay={0.08}>
-      <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold uppercase leading-[1.02] tracking-tight text-white">
+      <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold uppercase leading-[1.02] tracking-tight text-[#10151D]">
         {title.map((l, i) => (
           <span key={i} className="block">{l}</span>
         ))}
@@ -26,7 +26,7 @@ export const SectionHead = ({ num, title, sub }) => (
     </Reveal>
     {sub && (
       <Reveal delay={0.16}>
-        <p className="mt-6 text-base sm:text-lg text-[#94A3B8] leading-relaxed">{sub}</p>
+        <p className="mt-6 text-base sm:text-lg text-[#5C6470] leading-relaxed">{sub}</p>
       </Reveal>
     )}
   </div>

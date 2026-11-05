@@ -18,7 +18,6 @@ export default function Hero({ t }) {
 
   return (
     <section ref={ref} data-testid="hero-section" className="relative pt-32 sm:pt-40 pb-16 sm:pb-24 overflow-hidden">
-      <div className="absolute inset-0 spotlight" aria-hidden="true" />
       <motion.div style={{ opacity: glowO }} className="absolute -top-40 right-[-10%] w-[55vw] h-[55vw] rounded-full bg-[#2563EB]/10 blur-[120px]" aria-hidden="true" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +31,7 @@ export default function Hero({ t }) {
               {t.hero.eyebrow}
             </motion.p>
 
-            <h1 data-testid="hero-title" className="mt-6 font-display font-bold uppercase text-white text-4xl sm:text-5xl lg:text-6xl leading-[1.02] tracking-tight">
+            <h1 data-testid="hero-title" className="mt-6 font-display font-bold uppercase text-[#10151D] text-4xl sm:text-5xl lg:text-6xl leading-[1.02] tracking-tight">
               {t.hero.lines.map((line, i) => (
                 <span key={line} className="line-mask">
                   <motion.span
@@ -49,7 +48,7 @@ export default function Hero({ t }) {
 
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.75 }}
-              className="mt-7 max-w-xl text-base sm:text-lg text-[#94A3B8] leading-relaxed"
+              className="mt-7 max-w-xl text-base sm:text-lg text-[#5C6470] leading-relaxed"
               data-testid="hero-sub"
             >
               {t.hero.sub}
@@ -65,11 +64,11 @@ export default function Hero({ t }) {
                 <ArrowDownRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
               </button>
               <button data-testid="hero-specs-cta" onClick={() => scrollTo('s2')}
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-white hover:border-[#FF5500]/60 hover:text-[#FF5500] transition-[border-color,color] duration-300">
+                className="inline-flex items-center gap-2 rounded-full border border-black/20 px-7 py-3.5 text-sm font-semibold text-[#10151D] hover:border-[#FF5500]/70 hover:text-[#FF5500] transition-[border-color,color] duration-300">
                 {t.hero.cta2}
               </button>
               <a data-testid="hero-brochure-link" href={BROCHURE_URL} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono-tech text-xs uppercase tracking-[0.15em] text-[#94A3B8] hover:text-white transition-colors duration-300">
+                className="inline-flex items-center gap-2 font-mono-tech text-xs uppercase tracking-[0.15em] text-[#5C6470] hover:text-[#10151D] transition-colors duration-300">
                 <FileDown size={14} /> {t.hero.brochure}
               </a>
             </motion.div>
@@ -80,8 +79,8 @@ export default function Hero({ t }) {
               initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="relative"
             >
-              <div className="absolute -inset-3 border border-[#2563EB]/25 rounded-sm" aria-hidden="true" />
-              <div className="relative overflow-hidden rounded-sm border border-white/10 spotlight">
+              <div className="absolute -inset-3 border border-[#2563EB]/30 rounded-sm" aria-hidden="true" />
+              <div className="relative overflow-hidden rounded-sm border border-black/10 spotlight">
                 <motion.img
                   style={{ y: imgY }}
                   src={IMG.heroWall}
@@ -89,22 +88,22 @@ export default function Hero({ t }) {
                   className="w-full h-[420px] sm:h-[520px] object-cover object-center scale-110"
                   data-testid="hero-image"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/70 via-transparent to-transparent" aria-hidden="true" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D12]/60 via-transparent to-transparent" aria-hidden="true" />
               </div>
-              <figcaption className="mt-4 font-mono-tech text-xs text-[#64748B]" data-testid="hero-fig-caption">{t.hero.fig}</figcaption>
+              <figcaption className="mt-4 font-mono-tech text-xs text-[#8B929C]" data-testid="hero-fig-caption">{t.hero.fig}</figcaption>
             </motion.figure>
           </div>
         </div>
 
         <motion.dl
           initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.1 }}
-          className="mt-16 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10"
+          className="mt-16 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px bg-black/10 border border-black/10"
           data-testid="hero-stats"
         >
           {t.hero.stats.map((s, i) => (
-            <div key={i} className="bg-[#0A0D12] px-6 py-6" data-testid={`hero-stat-${i}`}>
-              <dt className="font-display text-3xl sm:text-4xl font-bold text-white">{s.v}</dt>
-              <dd className="mt-1 font-mono-tech text-[11px] uppercase tracking-[0.15em] text-[#64748B]">{s.l}</dd>
+            <div key={i} className="bg-white px-6 py-6" data-testid={`hero-stat-${i}`}>
+              <dt className="font-display text-3xl sm:text-4xl font-bold text-[#10151D]">{s.v}</dt>
+              <dd className="mt-1 font-mono-tech text-[11px] uppercase tracking-[0.15em] text-[#8B929C]">{s.l}</dd>
             </div>
           ))}
         </motion.dl>

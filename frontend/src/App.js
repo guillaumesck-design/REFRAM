@@ -42,8 +42,8 @@ function App() {
   }, [lang]);
 
   return (
-    <div className="grain min-h-screen bg-[#0A0D12]" data-testid="app-root">
-      <Toaster theme="dark" position="bottom-right" />
+    <div className="grain min-h-screen bg-[#F7F5F1]" data-testid="app-root">
+      <Toaster theme="light" position="bottom-right" />
       <Header t={t} lang={lang} setLang={setLang} />
       <main>
         <Hero t={t} />
