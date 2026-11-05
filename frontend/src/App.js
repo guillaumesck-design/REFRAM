@@ -13,6 +13,7 @@ import VideoSection from '@/components/VideoSection';
 import AutomationSection from '@/components/AutomationSection';
 import SparePartsSection from '@/components/SparePartsSection';
 import ContactSection from '@/components/ContactSection';
+import FloatingCallback from '@/components/FloatingCallback';
 import Footer from '@/components/Footer';
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         <ContactSection t={t} />
       </main>
       <Footer t={t} lang={lang} setLang={setLang} />
+      <FloatingCallback t={t.cb} />
     </div>
   );
 }

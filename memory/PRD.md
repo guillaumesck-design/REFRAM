@@ -51,6 +51,8 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 
 - 05/11/2026 : bouton « Être rappelé » dans la section contact — fenêtre avec le seul numéro de téléphone (+ consentement), endpoint POST /api/callback avec validation du numéro, e-mail envoyé à contact@overkkast.com avec lien tel:, archivage MongoDB (callback_requests). Testé : envoi réel réussi + numéro invalide rejeté.
 
+- 05/11/2026 : bouton flottant « Être rappelé » en bas à droite pendant toute la visite (apparaît après le hero, se masque sur la section contact et quand la fenêtre est ouverte) ; la demande de rappel inclut désormais nom + prénom en plus du téléphone (backend, e-mail et MongoDB mis à jour).
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

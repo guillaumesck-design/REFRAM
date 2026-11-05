@@ -7,6 +7,7 @@ import { X, Loader2, PhoneOutgoing } from 'lucide-react';
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
 export default function CallbackModal({ open, t, onClose }) {
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [consent, setConsent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -30,8 +31,9 @@ export default function CallbackModal({ open, t, onClose }) {
     if (sending) return;
     setSending(true);
     try {
-      await axios.post(`${API}/callback`, { phone, consent });
+      await axios.post(`${API}/callback`, { name, phone, consent });
       toast.success(t.success);
+      setName('');
       setPhone('');
       setConsent(false);
       onClose();
@@ -78,13 +80,22 @@ export default function CallbackModal({ open, t, onClose }) {
 
             <form onSubmit={submit} className="mt-7" data-testid="callback-form">
               <input
+                data-testid="callback-form-name"
+                required
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder={t.name}
+                className="w-full rounded-sm border border-black/15 bg-[#FBFAF7] px-4 py-3 text-base text-[#10151D] placeholder:text-[#8B929C] focus:outline-none focus:border-[#C5B358] focus:ring-1 focus:ring-[#C5B358]/50 transition-[border-color,box-shadow] duration-300"
+              />
+              <input
                 data-testid="callback-form-phone"
                 required
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder={t.phone}
-                className="w-full rounded-sm border border-black/15 bg-[#FBFAF7] px-4 py-3 text-base text-[#10151D] placeholder:text-[#8B929C] focus:outline-none focus:border-[#C5B358] focus:ring-1 focus:ring-[#C5B358]/50 transition-[border-color,box-shadow] duration-300"
+                className="mt-4 w-full rounded-sm border border-black/15 bg-[#FBFAF7] px-4 py-3 text-base text-[#10151D] placeholder:text-[#8B929C] focus:outline-none focus:border-[#C5B358] focus:ring-1 focus:ring-[#C5B358]/50 transition-[border-color,box-shadow] duration-300"
               />
               <label className="mt-4 flex items-start gap-3 cursor-pointer" data-testid="callback-form-consent-label">
                 <input data-testid="callback-form-consent" required type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)}

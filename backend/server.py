@@ -151,6 +151,7 @@ _PHONE_RE = re.compile(r'^[+\d][\d\s().\-]{5,24}$')
 
 
 class CallbackRequest(BaseModel):
+    name: str
     phone: str
     consent: bool
 
@@ -159,16 +160,20 @@ class CallbackRequest(BaseModel):
 async def request_callback(req: CallbackRequest):
     if not req.consent:
         raise HTTPException(status_code=422, detail="Consent required")
+    name = req.name.strip()
+    if not name:
+        raise HTTPException(status_code=422, detail="Name required")
     phone = req.phone.strip()
     if not _PHONE_RE.match(phone):
         raise HTTPException(status_code=422, detail="Invalid phone number")
 
     await db.callback_requests.insert_one({
+        "name": name,
         "phone": phone,
         "created_at": datetime.now(timezone.utc).isoformat(),
     })
 
-    subject = f"Demande de rappel — {phone}"
+    subject = f"Demande de rappel — {name} ({phone})"
     html = (
         '<table role="presentation" width="100%" style="background:#0A0D12;padding:24px">'
         '<tr><td style="font-family:Arial,sans-serif">'
@@ -177,6 +182,8 @@ async def request_callback(req: CallbackRequest):
         '<h2 style="color:#F8FAFC;font-size:20px;margin:8px 0 16px">Demande de rappel téléphonique</h2>'
         '<table role="presentation" width="100%" style="background:#121721;border:1px solid #1E2530;'
         'border-collapse:collapse;font-family:Arial,sans-serif">'
+        '<tr><td style="padding:10px 14px;font-size:13px;color:#94A3B8;border-bottom:1px solid #1E2530">Nom</td>'
+        f'<td style="padding:10px 14px;font-size:15px;color:#F8FAFC;border-bottom:1px solid #1E2530">{escape(name)}</td></tr>'
         '<tr><td style="padding:10px 14px;font-size:13px;color:#94A3B8;border-bottom:1px solid #1E2530">Téléphone</td>'
         f'<td style="padding:10px 14px;font-size:15px;color:#F8FAFC;border-bottom:1px solid #1E2530">'
         f'<a href="tel:{escape(phone)}" style="color:#C5B358">{escape(phone)}</a></td></tr>'
