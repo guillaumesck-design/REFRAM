@@ -125,6 +125,13 @@ export const LANG = {
       types: { mini: 'Piston Mini', standard: 'Piston Standard', long: 'Piston Long (latéral)', large: 'Piston Large (fond)' },
       note: 'Valeurs constructeur IDEALMODEL — mesurées à pression d’alimentation constante.',
     },
+    sv: {
+      num: 'Film — 6 min',
+      title: ['Le pissetage,', 'en mouvement.'],
+      sub: 'La présentation IDEALMODEL 2025 en images : le principe, la gamme complète et le cycle automatique, du fond du four au frittage.',
+      play: 'Lire la présentation',
+      fig: 'Film 01 — Présentation REFRAM™ 2025 (IDEALMODEL)',
+    },
     s4: {
       num: '04 — Automatisme',
       title: ['Entièrement automatique,', 'piloté par PLC.'],
@@ -270,6 +277,13 @@ export const LANG = {
       cols: ['Air pressure (bar)', 'Stroke / sec (Hz)', 'Hits / min (VPM)', 'Air consumption (m³/min)', 'Vibrational force (N)', 'Impact force (N)'],
       types: { mini: 'Mini type piston', standard: 'Standard type piston', long: 'Long type side piston', large: 'Large type floor piston' },
       note: 'IDEALMODEL manufacturer values — measured at constant supply pressure.',
+    },
+    sv: {
+      num: 'Film — 6 min',
+      title: ['Ramming,', 'in motion.'],
+      sub: 'The IDEALMODEL 2025 presentation in pictures: the principle, the full range and the automatic cycle, from furnace floor to sintering.',
+      play: 'Play the presentation',
+      fig: 'Film 01 — REFRAM™ 2025 presentation (IDEALMODEL)',
     },
     s4: {
       num: '04 — Automation',

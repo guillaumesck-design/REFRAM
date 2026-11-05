@@ -47,6 +47,8 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 
 - 05/11/2026 : fix déformation logo header (flex-shrink + max-width écrasaient l'image : ratio 4,58 → 5,29 natif, shrink-0 sur bouton et image, max-w-none) ; lien « Télécharger la plaquette » du hero passé en bouton à contour doré (btn-gold-outline).
 
+- 05/11/2026 : section « Film » ajoutée au milieu de la page (entre Performance et Automatisme) — vidéo de présentation IDEALMODEL 2025 (6 min, hébergée en local /video/presentation-2025.mp4), lecteur élégant avec affiche extraite de la vidéo, bouton lecture doré pulsant, contrôles natifs après le premier clic. Lecture vérifiée (currentTime > 0).
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

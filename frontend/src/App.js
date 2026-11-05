@@ -9,6 +9,7 @@ import Marquee from '@/components/Marquee';
 import WhySection from '@/components/WhySection';
 import ProductsSection from '@/components/ProductsSection';
 import SpecsSection from '@/components/SpecsSection';
+import VideoSection from '@/components/VideoSection';
 import AutomationSection from '@/components/AutomationSection';
 import SparePartsSection from '@/components/SparePartsSection';
 import ContactSection from '@/components/ContactSection';
@@ -51,6 +52,7 @@ function App() {
         <WhySection t={t} />
         <ProductsSection t={t} />
         <SpecsSection t={t} />
+        <VideoSection t={t} />
         <AutomationSection t={t} />
         <SparePartsSection t={t} />
         <ContactSection t={t} />
