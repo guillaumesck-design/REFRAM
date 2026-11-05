@@ -39,7 +39,7 @@ function App() {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.title = lang === 'fr'
-      ? 'REFRAM™ — Vibrateurs de pissetage réfractaire | OVERKKAST × IDEALMODEL'
+      ? 'REFRAM™ — Pissetage réfractaire pour fours | OVERKKAST'
       : 'REFRAM™ — Refractory ramming systems | OVERKKAST × IDEALMODEL';
   }, [lang]);
 

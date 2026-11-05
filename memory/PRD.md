@@ -53,6 +53,8 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 
 - 05/11/2026 : bouton flottant « Être rappelé » en bas à droite pendant toute la visite (apparaît après le hero, se masque sur la section contact et quand la fenêtre est ouverte) ; la demande de rappel inclut désormais nom + prénom en plus du téléphone (backend, e-mail et MongoDB mis à jour).
 
+- 05/11/2026 : SEO & cartes de partage — head complet (title 55c, description ~145c, OG + Twitter summary_large_image avec image absolue hébergée, locale fr_FR/en_US), JSON-LD Organization (tél/email/adresse confirmés), noscript riche, robots.txt (groupe IA explicite + Disallow /api/), llms.txt. Non émis volontairement en attendant l'URL de production de la page : canonical, og:url, sitemap.xml. À faire après déploiement : activer le toggle « Search Engine Crawling » et re-vérifier sur le domaine live.
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément
