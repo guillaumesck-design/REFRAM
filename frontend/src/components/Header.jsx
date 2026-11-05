@@ -4,11 +4,7 @@ import { Phone, Menu, X } from 'lucide-react';
 import { PHONE, PHONE_TEL } from '../i18n';
 
 export const LogoMark = ({ size = 34 }) => (
-  <svg width={size} height={size} viewBox="0 0 48 48" fill="none" aria-hidden="true">
-    <rect width="48" height="48" rx="6" fill="#0A0D12" />
-    <path d="M24 8 L28.5 19.5 L41 20 L31 28 L34.5 40 L24 33 L13.5 40 L17 28 L7 20 L19.5 19.5 Z" fill="#2563EB" />
-    <circle cx="24" cy="24" r="4.5" fill="#FF5500" />
-  </svg>
+  <img src="/favicon-mark.png" width={size} height={size} alt="Overkkast" style={{ objectFit: 'contain' }} />
 );
 
 const scrollTo = (id) => {
@@ -43,10 +39,10 @@ export default function Header({ t, lang, setLang }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-[72px]">
           <button data-testid="header-logo" onClick={() => window.__lenis ? window.__lenis.scrollTo(0) : window.scrollTo(0, 0)} className="flex items-center gap-3 text-left">
-            <LogoMark />
-            <span className="leading-tight">
-              <span className="block font-display font-bold uppercase tracking-wide text-[#10151D] text-base">{t.headerTag}</span>
-              <span className="block font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#FF5500]">{t.headerSub}</span>
+            <img src="/img/logo-dark.png" alt="Overkkast" className="h-7 sm:h-8 w-auto" />
+            <span className="hidden sm:block w-px h-6 bg-black/15" aria-hidden="true" />
+            <span className="hidden sm:block leading-tight">
+              <span className="block font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#2563EB]">{t.headerSub}</span>
             </span>
           </button>
 
@@ -71,7 +67,7 @@ export default function Header({ t, lang, setLang }) {
               ))}
             </div>
             <a data-testid="header-phone-cta" href={PHONE_TEL}
-              className="hidden xl:flex items-center gap-2 font-mono-tech text-xs text-[#5C6470] hover:text-[#10151D] transition-colors duration-300">
+              className="hidden xl:flex items-center gap-2 font-mono-tech text-xs whitespace-nowrap text-[#5C6470] hover:text-[#10151D] transition-colors duration-300">
               <Phone size={14} className="text-[#FF5500]" /> {PHONE}
             </a>
             <button data-testid="header-quote-btn" onClick={() => scrollTo('s6')}

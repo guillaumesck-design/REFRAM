@@ -37,6 +37,10 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 - 05/11/2026 : thème blanc (fond #F7F5F1, sections alternées #EFEDE6, texte #10151D) — les visuels produits et le footer restent sur fond sombre volontairement pour le contraste.
 - 05/11/2026 : fiches détaillées par machine — modal au clic sur chaque carte produit (description, caractéristiques, options & accessoires, FR/EN) ; le bouton « Demander cette configuration » pré-remplit le champ « Équipement d'intérêt » du formulaire et y fait défiler.
 
+- 05/11/2026 : couleur secondaire passée à un bleu neutre (#2563EB) sur toute la page (sous-titres header/footer, eyebrow du hero, numéros de section).
+- 05/11/2026 : téléphone remplacé par +33 (0)7 49 70 73 89 partout (header, section contact, footer, lien tel:).
+- 05/11/2026 : vrai logo OVERKKAST intégré (version sombre dans le header sur fond clair, version blanche dans le footer sombre) — l'étoile SVG supprimée ; favicon = rond doré du logo.
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

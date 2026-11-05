@@ -15,7 +15,7 @@ export const Reveal = ({ children, delay = 0, className = '', y = 32 }) => (
 export const SectionHead = ({ num, title, sub }) => (
   <div className="max-w-3xl">
     <Reveal>
-      <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-[#FF5500]">{num}</p>
+      <p className="font-mono-tech text-xs uppercase tracking-[0.25em] text-[#2563EB]">{num}</p>
     </Reveal>
     <Reveal delay={0.08}>
       <h2 className="mt-5 font-display text-4xl sm:text-5xl font-bold uppercase leading-[1.02] tracking-tight text-[#10151D]">

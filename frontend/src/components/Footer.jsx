@@ -1,5 +1,4 @@
 import { BadgeCheck } from 'lucide-react';
-import { LogoMark } from './Header';
 import { PHONE, PHONE_TEL, EMAIL } from '../i18n';
 
 export default function Footer({ t, lang, setLang }) {
@@ -9,11 +8,9 @@ export default function Footer({ t, lang, setLang }) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <LogoMark />
-              <span className="leading-tight">
-                <span className="block font-display font-bold uppercase tracking-wide text-white text-base">{t.headerTag}</span>
-                <span className="block font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#FF5500]">{t.headerSub}</span>
-              </span>
+              <img src="/img/logo-white.png" alt="Overkkast" className="h-8 w-auto" />
+              <span className="w-px h-6 bg-white/20" aria-hidden="true" />
+              <span className="font-mono-tech text-[10px] uppercase tracking-[0.2em] text-[#60A5FA]">{t.headerSub}</span>
             </div>
             <p className="mt-5 max-w-sm text-sm text-[#94A3B8] leading-relaxed" data-testid="footer-line">{t.footer.line}</p>
           </div>

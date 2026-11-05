@@ -23,8 +23,8 @@ export const EQUIPMENT_OPTION_INDEX = {
 export const BROCHURE_URL =
   'https://customer-assets-jai6qajn.emergentagent.net/job_404294ac-ec5b-4ba5-8fb9-197265498de7/artifacts/0e5e2ee9225241d0_02%20IDEAL%20Refractory%20Ramming%20Systems%20%28REFRAM%29%20Trifold.pdf';
 
-export const PHONE = '01 84 80 86 99';
-export const PHONE_TEL = 'tel:+33184808699';
+export const PHONE = '+33 (0)7 49 70 73 89';
+export const PHONE_TEL = 'tel:+33749707389';
 export const EMAIL = 'contact@overkkast.com';
 export const ADDRESS = 'Route de Moyembrie, 02380 Coucy-le-Château-Auffrique, France';
 

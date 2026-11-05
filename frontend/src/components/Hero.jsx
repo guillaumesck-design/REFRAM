@@ -25,7 +25,7 @@ export default function Hero({ t }) {
           <div className="lg:col-span-7">
             <motion.p
               initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-mono-tech text-xs uppercase tracking-[0.25em] text-[#FF5500]"
+              className="font-mono-tech text-xs uppercase tracking-[0.25em] text-[#2563EB]"
               data-testid="hero-eyebrow"
             >
               {t.hero.eyebrow}
