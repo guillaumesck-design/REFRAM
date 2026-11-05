@@ -45,6 +45,8 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 - 05/11/2026 : typographie plus classique/professionnelle — titres Libre Franklin, texte Source Sans 3, labels IBM Plex Mono ; petites tailles de police augmentées partout (10-12px → 13-14px, 14px → 16px).
 - 05/11/2026 : header agrandi (logo h-12, menu en text-sm, hauteur 96px) ; sous-titre « Distributeur France » retiré du header (conservé au footer) pour éviter le chevauchement du menu.
 
+- 05/11/2026 : fix déformation logo header (flex-shrink + max-width écrasaient l'image : ratio 4,58 → 5,29 natif, shrink-0 sur bouton et image, max-w-none) ; lien « Télécharger la plaquette » du hero passé en bouton à contour doré (btn-gold-outline).
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément

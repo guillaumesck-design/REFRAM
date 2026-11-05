@@ -34,8 +34,8 @@ export default function Header({ t, lang, setLang }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
-          <button data-testid="header-logo" onClick={() => window.__lenis ? window.__lenis.scrollTo(0) : window.scrollTo(0, 0)} className="flex items-center gap-4 text-left">
-            <img src="/img/logo-dark.png" alt="Overkkast" className="h-10 sm:h-12 w-auto" />
+          <button data-testid="header-logo" onClick={() => window.__lenis ? window.__lenis.scrollTo(0) : window.scrollTo(0, 0)} className="flex items-center gap-4 text-left shrink-0">
+            <img src="/img/logo-dark.png" alt="Overkkast" className="h-10 sm:h-12 w-auto max-w-none shrink-0" />
           </button>
 
           <nav className="hidden lg:flex items-center gap-8" data-testid="header-nav">

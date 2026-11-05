@@ -68,7 +68,7 @@ export default function Hero({ t }) {
                 {t.hero.cta2}
               </button>
               <a data-testid="hero-brochure-link" href={BROCHURE_URL} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono-tech text-[13px] uppercase tracking-[0.15em] text-[#5C6470] hover:text-[#10151D] transition-colors duration-300">
+                className="btn-gold-outline inline-flex items-center gap-2 rounded-full border px-8 py-4 font-mono-tech text-[13px] uppercase tracking-[0.15em]">
                 <FileDown size={15} /> {t.hero.brochure}
               </a>
             </motion.div>

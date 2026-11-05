@@ -8,7 +8,7 @@ export default function Footer({ t, lang, setLang }) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-4">
-              <img src="/img/logo-white.png" alt="Overkkast" className="h-10 w-auto" />
+              <img src="/img/logo-white.png" alt="Overkkast" className="h-10 w-auto shrink-0" />
               <span className="w-px h-8 bg-white/20" aria-hidden="true" />
               <span className="font-mono-tech text-[13px] uppercase tracking-[0.2em] text-[#60A5FA]">{t.headerSub}</span>
             </div>
