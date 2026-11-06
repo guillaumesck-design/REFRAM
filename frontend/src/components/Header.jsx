@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
 import { PHONE, PHONE_TEL } from '../i18n';
 
 const scrollTo = (id) => {
@@ -38,10 +38,15 @@ export default function Header({ t, lang, setLang }) {
             <img src="/img/logo-dark.png" alt="Overkkast" className="h-10 sm:h-12 w-auto max-w-none shrink-0" />
           </button>
 
-          <nav className="hidden lg:flex items-center gap-8" data-testid="header-nav">
+          <nav className="hidden xl:flex items-center gap-6" data-testid="header-nav">
+            <a data-testid="nav-overkkast" href="https://www.overkkast.com"
+              className="inline-flex items-center gap-1.5 font-mono-tech text-[13px] uppercase tracking-[0.15em] text-[#8C7A28] hover:text-[#10151D] transition-colors duration-300">
+              overkkast.com <ArrowUpRight size={15} />
+            </a>
+            <span className="w-px h-5 bg-black/15" aria-hidden="true" />
             {links.map(([id, label]) => (
               <button key={id} data-testid={`nav-${id}`} onClick={() => scrollTo(id)}
-                className="font-mono-tech text-sm uppercase tracking-[0.15em] text-[#3A4350] hover:text-[#10151D] transition-colors duration-300">
+                className="font-mono-tech text-[13px] uppercase tracking-[0.15em] text-[#3A4350] hover:text-[#10151D] transition-colors duration-300">
                 {label}
               </button>
             ))}
@@ -59,14 +64,14 @@ export default function Header({ t, lang, setLang }) {
               ))}
             </div>
             <a data-testid="header-phone-cta" href={PHONE_TEL}
-              className="hidden xl:flex items-center gap-2 font-mono-tech text-sm whitespace-nowrap text-[#3A4350] hover:text-[#10151D] transition-colors duration-300">
+              className="hidden 2xl:flex items-center gap-2 font-mono-tech text-sm whitespace-nowrap text-[#3A4350] hover:text-[#10151D] transition-colors duration-300">
               <Phone size={16} className="text-[#C5B358]" /> {PHONE}
             </a>
             <button data-testid="header-quote-btn" onClick={() => scrollTo('s6')}
               className="btn-gold hidden sm:inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold whitespace-nowrap">
               {t.quoteCta}
             </button>
-            <button data-testid="mobile-menu-btn" onClick={() => setOpen(!open)} className="lg:hidden p-2 text-[#10151D]" aria-label="Menu">
+            <button data-testid="mobile-menu-btn" onClick={() => setOpen(!open)} className="xl:hidden p-2 text-[#10151D]" aria-label="Menu">
               {open ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
@@ -77,10 +82,14 @@ export default function Header({ t, lang, setLang }) {
         {open && (
           <motion.nav
             initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-black/10 overflow-hidden"
+            className="xl:hidden bg-white/95 backdrop-blur-xl border-b border-black/10 overflow-hidden"
             data-testid="mobile-menu"
           >
             <div className="px-6 py-6 flex flex-col gap-4">
+              <a data-testid="mobile-nav-overkkast" href="https://www.overkkast.com"
+                className="inline-flex items-center gap-2 font-mono-tech text-sm uppercase tracking-[0.15em] text-[#8C7A28]">
+                overkkast.com <ArrowUpRight size={15} />
+              </a>
               {links.map(([id, label]) => (
                 <button key={id} data-testid={`mobile-nav-${id}`} onClick={() => { setOpen(false); scrollTo(id); }}
                   className="text-left font-display text-2xl font-semibold uppercase text-[#10151D]">

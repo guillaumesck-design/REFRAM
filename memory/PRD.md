@@ -55,6 +55,8 @@ L'utilisateur (OVERKKAST, www.overkkast.com) souhaite une page web à ajouter à
 
 - 05/11/2026 : SEO & cartes de partage — head complet (title 55c, description ~145c, OG + Twitter summary_large_image avec image absolue hébergée, locale fr_FR/en_US), JSON-LD Organization (tél/email/adresse confirmés), noscript riche, robots.txt (groupe IA explicite + Disallow /api/), llms.txt. Non émis volontairement en attendant l'URL de production de la page : canonical, og:url, sitemap.xml. À faire après déploiement : activer le toggle « Search Engine Crawling » et re-vérifier sur le domaine live.
 
+- 06/11/2026 : lien « overkkast.com » ajouté au menu (desktop + mobile) vers le site principal ; header rééquilibré (menu complet dès 1280 px, burger en dessous, téléphone visible à partir de 1536 px) pour éviter tout débordement.
+
 ## Backlog priorisé
 - P0 : déploiement + liaison depuis overkkast.com (menu/bouton)
 - P1 : SEO (meta OG, sitemap dédié) si la page est indexée séparément
